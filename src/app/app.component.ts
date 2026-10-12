@@ -1,39 +1,84 @@
+
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 interface PortfolioProject {
   title: string;
   description: string;
   technologies: string[];
+  learned: string;
+  link: string;
 }
 
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  readonly title = 'Student Portfolio';
-  readonly studentName = 'Your Name';
+  readonly title = 'Web Developer Portfolio';
+  readonly studentName = 'Boyd Vigness';
   readonly currentYear = new Date().getFullYear();
 
-  readonly skills = ['Angular', 'TypeScript', 'HTML', 'CSS'];
+  readonly skills = [
+    'HTML',
+    'CSS',
+    'JavaScript',
+    'TypeScript',
+    'Angular',
+    'Node.js',
+    'Express',
+    'MongoDB',
+    'Git',
+    'GitHub',
+    'REST APIs',
+    'Unit Testing'
+  ];
 
   readonly projects: PortfolioProject[] = [
     {
-      title: 'Project One',
-      description: 'Replace this text with a short explanation of the problem your project solves.',
-      technologies: ['Angular', 'TypeScript']
+      title: 'Wild Rescues',
+      description: 'A website project focused on an animal rescue organization and its mission.',
+      technologies: ['HTML', 'CSS'],
+      learned: 'Building accessible web pages and organizing content into a clear, user-friendly layout.',
+      link: ''
     },
     {
-      title: 'Project Two',
-      description: 'Describe your contribution, the decisions you made, and what you learned.',
-      technologies: ['HTML', 'CSS']
+      title: 'BioSite',
+      description: 'A biographical website created to present a person’s background, interests, and story.',
+      technologies: ['HTML', 'CSS'],
+      learned: 'Planning a multi-page website and presenting personal information through thoughtful design.',
+      link: 'https://github.com/Bvigness630/bioSite'
     },
     {
-      title: 'Project Three',
-      description: 'Add another course project or a personal project that represents your work.',
-      technologies: ['Add', 'Your', 'Tools']
+      title: 'RPG Character Builder',
+      description: 'An Angular application developed around character classes and character-building features.',
+      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+      learned: 'Working with Angular components, services, routing, and TypeScript.',
+      link: 'https://github.com/Bvigness630/rpg-character-builder'
+    },
+    {
+      title: 'Virtual Taco Stand',
+      description: 'An Angular application for a virtual taco stand, using separate areas for menu and ordering features.',
+      technologies: ['Angular', 'TypeScript', 'HTML', 'CSS'],
+      learned: 'Working with Angular application structure, components, and testing.',
+      link: 'https://github.com/Bvigness630/virtual-taco-stand'
+    },
+    {
+      title: 'In-N-Out Books',
+      description: 'A book-focused application with an API built using Node.js and Express.',
+      technologies: ['Node.js', 'Express', 'MongoDB', 'JavaScript', 'Jest'],
+      learned: 'Building API endpoints, validating data, and testing backend functionality.',
+      link: 'https://github.com/Bvigness630/in-n-out-books'
+    },
+    {
+      title: 'WhatABook / Booklight Burrow',
+      description: 'A collaborative book application project involving MongoDB and book-related features.',
+      technologies: ['MongoDB', 'JavaScript', 'Node.js'],
+      learned: 'Working with database queries, retrieving book information, and testing application features.',
+      link: 'https://marvelapp.com/prototype/8546a5h/screen/98946450'
     }
   ];
 }
