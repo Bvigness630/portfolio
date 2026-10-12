@@ -25,7 +25,7 @@ export class Projects {
       description: 'A website project focused on an animal rescue organization and its mission.',
       technologies: ['HTML', 'CSS'],
       learned: 'Building accessible web pages and organizing content into a clear, user-friendly layout.',
-      link: '/rescue.zip'
+      link: 'rescue.zip'
     },
     {
       title: 'BioSite',
